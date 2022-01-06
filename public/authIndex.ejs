@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio AUTENTICACION</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+</head>
+<body>
+    <div class="container h-100">
+        <a id="logout_a" href="http://localhost:3000/logout">Logout</a>
+    </div>
+    <h1 id="welcome_msg"> WELCOME <%=user%></h1>
+    <h2 style="display: none;" id="bye_msg"> ¡Hasta luego, <%=user%>!</h2>
+</body>
+<script>
+    const logout = document.getElementById('logout_a')
+    const welcome = document.getElementById('welcome_msg')
+    const bye = document.getElementById('bye_msg')
+    logout.addEventListener('click', ()=>{
+        welcome.style.display = 'none'
+        bye.style.display = 'block'
+    })
+</script>
+</html>
